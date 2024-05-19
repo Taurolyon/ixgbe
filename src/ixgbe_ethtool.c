@@ -4851,10 +4851,10 @@ static struct ethtool_ops ixgbe_ethtool_ops = {
 	.get_ts_info		= ixgbe_get_ts_info,
 #endif
 #if defined(ETHTOOL_GRSSH) && defined(ETHTOOL_SRSSH)
-	.get_rxfh_indir_size	= ixgbe_rss_indir_size,
-	.get_rxfh_key_size	= ixgbe_get_rxfh_key_size,
-	.get_rxfh		= ixgbe_get_rxfh,
-	.set_rxfh		= ixgbe_set_rxfh,
+	//.get_rxfh_indir_size	= ixgbe_rss_indir_size,
+	//.get_rxfh_key_size	= ixgbe_get_rxfh_key_size,
+	//.get_rxfh		= ixgbe_get_rxfh,
+	//.set_rxfh		= ixgbe_set_rxfh,
 #endif /* ETHTOOL_GRSSH && ETHTOOL_SRSSH */
 #endif /* HAVE_RHEL6_ETHTOOL_OPS_EXT_STRUCT */
 };
