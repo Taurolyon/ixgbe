@@ -1626,14 +1626,14 @@ static void ixgbe_get_drvinfo(struct net_device *netdev,
 {
 	struct ixgbe_adapter *adapter = netdev_priv(netdev);
 
-	strlcpy(drvinfo->driver, ixgbe_driver_name,
+	strscpy(drvinfo->driver, ixgbe_driver_name,
 		sizeof(drvinfo->driver));
-	strlcpy(drvinfo->version, ixgbe_driver_version,
+	strscpy(drvinfo->version, ixgbe_driver_version,
 		sizeof(drvinfo->version));
 
-	strlcpy(drvinfo->fw_version, adapter->eeprom_id,
+	strscpy(drvinfo->fw_version, adapter->eeprom_id,
 		sizeof(drvinfo->fw_version));
-	strlcpy(drvinfo->bus_info, pci_name(adapter->pdev),
+	strscpy(drvinfo->bus_info, pci_name(adapter->pdev),
 		sizeof(drvinfo->bus_info));
 
 #ifdef HAVE_ETHTOOL_GET_SSET_COUNT
