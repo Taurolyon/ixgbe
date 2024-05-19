@@ -7,9 +7,10 @@ Credit to cybernard - https://forum.proxmox.com/threads/intel-x553-sfp-ixgbe-no-
 
 ## Installation
 ```
+cd ~
 git clone https://github.com/Taurolyon/ixgbe.git
 sudo apt install dkms gcc make proxmox-headers-$(uname -r)
-sudo cp -R ./ixgbe-5.20.3 /usr/src/
+sudo cp -R ~/ixgbe-5.20.3 /usr/src/
 sudo dkms add -m ixgbe -v 5.20.3
 sudo dkms build -m ixgbe -v 5.20.3
 sudo dkms install -m ixgbe -v 5.20.3
